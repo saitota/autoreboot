@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+
+  exec:
+    deps: [setenv,rungo]
+
+  rungo:
+    cmds:
+      - echo tbd
+
+  setupgo:
+    cmds:
+      - rm go.mod
+      - go mod init main
+      - go mod tidy
