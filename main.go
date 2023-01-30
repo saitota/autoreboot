@@ -88,8 +88,16 @@ func main() {
 	page.WaitForTimeout(1 * 1000) // TODO: fix someday
 
 	log.Printf("STEP:CONFIRM REBOOT OK")
+
 	//FIXME:wakaranai
-	//page.On("Dialog","OK")
+	log.Printf("do it!")
+	page.On("dialog", func(dialog playwright.Dialog) {
+		log.Printf(dialog.Message())
+		dialog.Accept()
+	})
+	//if err != nil {
+	//	log.Fatalf("Could not Accept: %v", err)
+	//}
 	//browser.ExpectedDialog.Accept("OK")
 	//page.ExpectedDialog.Accept("OK")
 
