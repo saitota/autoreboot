@@ -19,7 +19,7 @@ var DryRun string
 func loadEnvs() [2]AuthInfo {
 	var ret [2]AuthInfo
 	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error loading .env file: %v", err)
+		log.Fatalf("Error loading .env file: %v", err)
 	}
 	DryRun = os.Getenv("DRY_RUN")
 	f660aAuth := AuthInfo{
