@@ -1,10 +1,6 @@
 version: '3'
 
 tasks:
-
-  exec:
-    deps: [setenv,rungo]
-
   autoreboot:
     cmds:
       - go run main
