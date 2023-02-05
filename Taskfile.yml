@@ -5,9 +5,9 @@ tasks:
   exec:
     deps: [setenv,rungo]
 
-  rungo:
+  autoreboot:
     cmds:
-      - echo tbd
+      - go run main
 
   setupgo:
     cmds:
